@@ -1,13 +1,15 @@
-name: Greetings
-
-on: [pull_request, issues]
-
+name: telegram message
+on: [push]
 jobs:
-  greeting:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/first-interaction@v1
+    - uses: actions/checkout@master
+    - name: send custom message with args
+      uses: appleboy/telegram-action@master
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Message that will be displayed on users'' first issue'
-        pr-message: 'Message that will be displayed on users'' first pr'
+        to: -1001290660661
+        token: 1124675180:AAHXnQ03W_2B_lIcR2FRe4DrUopyXaXShYE
+        args: The ${{ github.event_name }} event triggered first step.
