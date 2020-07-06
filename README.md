@@ -1,5 +1,5 @@
 # harbor_retain
-2020.07.05
+
 ### Intro
 
 Delete images of Harbor depending on the specific **keep_num ** of docker images for each project.
