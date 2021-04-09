@@ -21,7 +21,7 @@ $ yum install python3
 ```sh
 $ pip3 install python-dateutil tqdm requests
 ```
-**配置**
+### Configure
 
 \# harbor api interface
 api_url = "https://`xxx.xxx.xxx`/api"  # xxx.xxx.xxx , replaced with the url of harbor
@@ -32,9 +32,7 @@ exclude = ['`proj1`', '`proj2`', '`proj3`'']
 \# Number of images to keep
 keep_num = `20`
 
-
-
-**Harbor x509 Certs 
+**Harbor x509 Certs** 
 
 If you encounter the problem regarding to X509, try to fix with the following command.
 CentOS 7
